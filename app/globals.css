@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  user-select: none;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 50px
+    ),
+    repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 50px
+    ),
+    black;
+    overflow-x: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  background: 
+    radial-gradient(transparent, black 60%);
+}
+
+.profile-page {
+  background:
+    linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(34, 34, 34) 50%, rgb(107, 107, 107) 100%);
+  border: solid 3px rgb(255, 255, 255);
+  box-shadow: 0 0 75px 5px rgba(255, 255, 255, 0.3);
+}
+
+.textbox {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.banner {
+  background: no-repeat center url('https://i.pinimg.com/originals/c3/93/de/c393de62970df6a45ddd7bc65935fb96.gif');
+}
