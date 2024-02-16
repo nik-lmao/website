@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import type { Viewport } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: "black",
+}
+
 export const metadata: Metadata = {
   title: "nik's website",
-  description: "",
+  description: "welcome to my website!"
 };
 
 export default function RootLayout({
@@ -17,14 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta property="og:title" content="nik's website" />
         <meta property="og:description" content="welcome to my website!" />
-        <meta property="og:image" content="https://i.pinimg.com/originals/c3/93/de/c393de62970df6a45ddd7bc65935fb96.gif" />
-        <meta property="og:url" content="https://nik-lmao.vercel.app" />
         <meta property="og:type" content="website" />
-        <meta name="theme-color" content="#000000" />
-      </Head>
+        <meta property="og:site_name" content="nik's website" />
+        <meta property="og:image" content="/pfp.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:image:alt" content="A shiny red apple with a bite taken out" />
+
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
