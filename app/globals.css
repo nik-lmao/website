@@ -37,6 +37,7 @@ body {
     radial-gradient(transparent, black 60%);
 }
 
+
 .profile-page {
   background:
     linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(34, 34, 34) 50%, rgb(107, 107, 107) 100%);
@@ -50,4 +51,21 @@ body {
 
 .banner {
   background: no-repeat center url('https://i.pinimg.com/originals/c3/93/de/c393de62970df6a45ddd7bc65935fb96.gif');
+}
+
+.white-shadow {
+  text-shadow: 0 0 50px rgba(255, 255, 255);
+}
+
+.blue-shadow {
+  text-shadow: 0 0 50px rgb(81, 81, 255);
+}
+
+@media (max-width: 409px){
+  .smallScreenAlert {
+    display: block;
+  }
+  .mainPage {
+    display: none;
+  }
 }
