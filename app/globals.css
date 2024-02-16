@@ -20,7 +20,7 @@ body {
     transparent 50px
     ),
     black;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .centered {
@@ -46,11 +46,6 @@ body {
 
 .textbox {
   background: rgba(0, 0, 0, 0.5);
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
 }
 
 .banner {
