@@ -47,9 +47,6 @@ export default function Home() {
           <div className="rounded-lg px-[10px] py-[5px] textbox">
             <h1 className="text-white">Check out my <a className="text-blue-500" href="https://github.com/nik-lmao" target="_blank">github profile</a>!</h1>
           </div>
-          <div className="text-center">
-            <h1 className="text-white opacity-[0.8] font-bold translate-y-[95vh]">Made with ❤️ by <a className="text-blue-500" href="https://github.com/nik-lmao" target="_blank">nik-lmao</a>.</h1>
-          </div>
         </div>
       </div>
     </div>
