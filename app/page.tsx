@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="page">
       <div className="mainPage">
-        <div className="centered profile-page w-[400px] h-[350px] p-[20px] rounded-2xl text-white">
+        <div className="centered profile-page w-[400px] h-[350px] p-[20px] rounded-2xl text-white font-bold">
           <div className="banner rounded-lg w-[100%] h-[100px] mb-[50px] border-[3px] border-black">
             <div>
               <Image src="/pfp.jpg" alt="Profile Picture" width={70} height={70} className="rounded-full translate-x-[15px] translate-y-[60px] border-[3px] border-gray-900" draggable={false}/>
@@ -44,16 +44,16 @@ export default function Home() {
           </div>
           <div>
             <div className="p-0 rounded-lg px-[10px] py-[5px] textbox mb-[20px] border-black border-[2px] hover:scale-[1.03] transition-all">
-              <h1>Hey, I am <span className="text-blue-500 font-bold">nik</span>! I am a <span className="text-blue-300 font-bold">developer</span> from <span className="text-blue-300 font-bold">Germany</span>! I love <span className="text-blue-300 font-bold">coding</span>, <span className="text-blue-300 font-bold">gaming</span> and <span className="text-blue-300 font-bold">meeting friends</span>!</h1>
+              <h1>Hey, I am <span className="text-blue-500">nik</span>! I am a <span className="text-blue-300">developer</span> from <span className="text-blue-300 ">Germany</span>! I love <span className="text-blue-300 ">coding</span>, <span className="text-blue-300 ">gaming</span> and <span className="text-blue-300 ">meeting friends</span>!</h1>
             </div>
             <div className="rounded-lg px-[10px] py-[5px] textbox border-black border-[2px] hover:scale-[1.03] transition-all">
-              <h1>Check out my <a className="text-blue-500 font-bold" href="https://github.com/nik-lmao" target="_blank">github profile</a>!</h1>
+              <h1>Check out my <a className="text-blue-500 " href="https://github.com/nik-lmao" target="_blank">github profile</a>!</h1>
             </div>
           </div>
         </div>
       </div>
       <div className="hidden centered text-center smallScreenAlert">
-        <h1 className="text-white text-xl white-shadow"><span className="text-blue-500 blue-shadow font-bold">Sorry</span>, this page is only available for users with a screen width of <span className="text-blue-500 blue-shadow font-bold">410 pixels and more</span>.</h1>
+        <h1 className="text-white text-xl white-shadow"><span className="text-blue-500 blue-shadow ">Sorry</span>, this page is only available for users with a screen width of <span className="text-blue-500 blue-shadow ">410 pixels and more</span>.</h1>
       </div>    
     </div>
   );
