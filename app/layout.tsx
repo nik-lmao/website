@@ -7,7 +7,7 @@ import type { Viewport } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
-  themeColor: "green",
+  themeColor: "#ff0000",
 }
 
 export const metadata: Metadata = {
