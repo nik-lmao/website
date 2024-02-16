@@ -37,8 +37,8 @@ export default function Home() {
         <div className="centered profile-page w-[400px] h-[350px] p-[20px] rounded-2xl text-white">
           <div className="banner rounded-lg w-[100%] h-[100px] mb-[50px] border-[3px] border-black">
             <div>
-              <Image src="/pfp.jpg" alt="Profile Picture" width={70} height={70} className="rounded-full translate-x-[15px] translate-y-[60px]" draggable={false}/>
-              <span className={`${discordStatus == "online" ? "bg-green-500" : (discordStatus == "idle" ? "bg-yellow-500" : (discordStatus == "dnd" ? "bg-red-500" : (discordStatus == "offline" ? "bg-gray-500" : "bg-red-500")))} h-[20px] w-[20px] rounded-full block translate-x-[62px] translate-y-[42px] border-gray-900 border-[2px]`}></span>
+              <Image src="/pfp.jpg" alt="Profile Picture" width={70} height={70} className="rounded-full translate-x-[15px] translate-y-[60px] border-[3px] border-gray-900" draggable={false}/>
+              <span className={`${discordStatus == "online" ? "bg-green-500" : (discordStatus == "idle" ? "bg-yellow-500" : (discordStatus == "dnd" ? "bg-red-500" : (discordStatus == "offline" ? "bg-gray-500" : "bg-red-500")))} h-[20px] w-[20px] rounded-full block translate-x-[62px] translate-y-[42px] border-gray-900 border-[3px]`}></span>
               {/* Please ignore my nice status system :))*/}
             </div>
           </div>
