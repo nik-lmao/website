@@ -41,7 +41,7 @@ body {
   background:
     linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(34, 34, 34) 50%, rgb(107, 107, 107) 100%);
   border: solid 3px rgb(255, 255, 255);
-  box-shadow: 0 0 75px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 150px 5px rgba(255, 255, 255, 0.3);
 }
 
 .textbox {
