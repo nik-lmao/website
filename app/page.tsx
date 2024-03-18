@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div>
             <div className="p-0 rounded-lg px-[10px] py-[5px] textbox mb-[20px] border-black border-[2px] hover:scale-[1.03] transition-all">
-              <h1>Hey, I am <span className="text-blue-500">nik</span>! I am a <span className="text-blue-300">developer</span> from <span className="text-blue-300 ">Germany</span>! I love <span className="text-blue-300 ">coding</span>, <span className="text-blue-300 ">gaming</span> and <span className="text-blue-300 ">meeting friends</span>!</h1>
+              <h1>Hey, I am <span className="text-blue-500">nik</span>! I am a developer from Germany! I love coding, gaming and meeting friends!</h1>
             </div>
             <div className="rounded-lg px-[10px] py-[5px] textbox border-black border-[2px] hover:scale-[1.03] transition-all">
               <h1>Check out my <a className="text-blue-500 " href="https://github.com/nik-lmao" target="_blank">github profile</a>!</h1>
