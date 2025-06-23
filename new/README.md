@@ -20,3 +20,4 @@ Thanks for visiting!!
 23.06.2025 - 
 I created the first simple design for my website. Tried going for a dento style with multiple windows which all have different contents. Not completely done yet , but planning on adding a Spotify - Now Playing, Discord Status (and maybe weather) display.
 + time greetings
+I used AI to get a general understanding of how to position the elements on the screen but did NOT copy & paste any code.
