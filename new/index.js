@@ -22,71 +22,90 @@ function updateTime() {
     }
     if (timeH) timeH.textContent = greeting;
 
-
-
-    if (localElem) {
-        localElem.textContent = "Local time: " + now.toLocaleTimeString();
-    }
-
+    if (localElem) localElem.textContent = "Local time: " + now.toLocaleTimeString();
 
 
     if (nikitaElem) {
-        const nikitaTimeString = now.toLocaleTimeString("en-GB", { hour12: false, timeZone: "Europe/Berlin" });
+
+        const nikitaTimeString = now.toLocaleTimeString("en-GB", {
+
+            hour12: false,
+
+            timeZone: "Europe/Berlin"
+
+        });
 
         nikitaElem.textContent = "Nikita time (Europe/Berlin): " + nikitaTimeString;
     }
 }
 
-// -------------------------------------------------------------------------------------------------------------------------------------------- //
+
+// ------------------------------------------------------------------------------------------------------------------
+
 
 
 function updateWeather() {
+    const weatherElem = document.getElementById("local-weather");
+    const locationNameElem = document.getElementById("location-name");
 
-    const ip = "https://api.ipify.org?format=json";
+    weatherElem.textContent = "Loading weather...";
 
-    // -> ipinfo
+    fetch("https://api.ipify.org?format=json")
 
-    // -> city
+        .then(res => res.json())
 
-    // -> pass it onto weather api
+        .then(ipData => {
 
+            const ip = ipData.ip;
+            return fetch(`https://ipinfo.io/${ip}?token=f4defad31d60d0`);
+        })
+        .then(res => res.json())
 
+        .then(locationData => {
+            const city = locationData.city;
+            const country = locationData.country;
 
-
-    // 3ecb6948ccb5426abd2203902252306
-    // 401? -> not activated yet; fix later
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Traunstein,de&appid=3ecb6948ccb5426abd2203902252306&units=metric')
-        .then(response => response.json())
-        .then(data => {
-
-            const temp = Math.round(data.main.temp);
-            const desc = data.weather[0].description;
-            weatherElem.textContent = `Weather in Traunstein: ${temp}°C, ${desc}`;
+            return fetch(`https://api.weatherapi.com/v1/current.json?key=3ecb6948ccb5426abd2203902252306&q=${city},${country}`);
 
         })
-        .catch(error => {
-            const weatherElem = document.getElementById("local-weather");
-            if (weatherElem) {
-                weatherElem.textContent = "Unable to fetch weather data.";
+
+        .then(res => res.json())
+
+        .then(data => {
+            let temp = data.current.temp_c;
+            let desc = data.current.condition.text;
+
+            if (desc.includes("Sunny")) {
+                desc = "☀️";
+            } else if (desc.includes("Cloudy")) {
+                desc = "☁️";
+            } else if (desc.includes("Rain") || desc.includes("Showers")) {
+                desc = "🌧️";
+            } else if (desc.includes("Storm")) {
+                desc = "⛈️";
             }
+
+
+
+            weatherElem.textContent = `${desc} ${temp}°C`;
+            locationNameElem.textContent = `${data.location.name}, ${data.location.country}`;
+        })
+
+        .catch(error => {
+            weatherElem.textContent = "Unable to fetch weather data: " + error.message;
         });
-
-
-
-
 
 }
 
 
+// ------------------------------------------------------------------------------------------------------------------
 
 
 
 window.onload = function () {
-    const weatherElem = document.getElementById("local-weather");
-    weatherElem.textContent = "Loading weather...";
+
     updateTime();
     updateWeather();
 
-    setInterval(updateTime, 1000); // update every second
+    setInterval(updateTime, 1000); /* update every second */
 };
