@@ -27,3 +27,6 @@ I first added a cool animation when hovering over the boxes - the box the user i
 Then I decided, it would be better to center all the boxes vertically. Since I had no idea, how to do that, I asked ChatGPT.
 Also added some contents into the 3 boxes: my local time, the local time of the user viewing the website + started working on a weather display which displays the weather of the user viewing the website by finding the location via IP address and passing it onto freeweatherapi to find the current temperature. :)
 also reduced the glowyness of the boxes..
+
+24.06.2025 - 0
+I added all the functionality to the local weather display. The API guide for freeweatherapi didn't really work, so I found the official documentation and used that to get the current temperature of the user viewing the website by first locating them via their IP address and then passing that onto the API to get the current temperature. Didn't actually use any AI (chatgpt etc) for this one, just the docs and some automatic formatting by GitHub Copilot.
