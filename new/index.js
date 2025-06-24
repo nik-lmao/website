@@ -87,6 +87,9 @@ function updateWeather() {
 
 
 
+
+            temp = Math.round(temp); // round
+
             weatherElem.textContent = `${desc} ${temp}°C`;
             locationNameElem.textContent = `${data.location.name}, ${data.location.country}`;
         })
@@ -105,7 +108,17 @@ function updateWeather() {
 window.onload = function () {
 
     updateTime();
-    updateWeather();
+    
 
     setInterval(updateTime, 1000); /* update every second */
 };
+
+
+
+let weatherActive = false;
+document.getElementById("weather-box").onclick = function () {
+    if (!weatherActive) {
+        weatherActive = true;
+        updateWeather();
+    }
+}

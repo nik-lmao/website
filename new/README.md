@@ -30,3 +30,6 @@ also reduced the glowyness of the boxes..
 
 24.06.2025 - 0
 I added all the functionality to the local weather display. The API guide for freeweatherapi didn't really work, so I found the official documentation and used that to get the current temperature of the user viewing the website by first locating them via their IP address and then passing that onto the API to get the current temperature. Didn't actually use any AI (chatgpt etc) for this one, just the docs and some automatic formatting by GitHub Copilot.
+
+24.06.2025 - 1
+I added some socials links to my GitHub and Discord profiles and added a clickable weather display so it doesn't use up my free API calls.
