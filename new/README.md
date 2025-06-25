@@ -33,3 +33,7 @@ I added all the functionality to the local weather display. The API guide for fr
 
 24.06.2025 - 1
 I added some socials links to my GitHub and Discord profiles and added a clickable weather display so it doesn't use up my free API calls.
+
+
+25.06.2025 - 0
+I experimented a lot with a new background design and also changed some smaller stuff, like highlighting the text with a blue glow effect and adding a waving hand (hehe)
