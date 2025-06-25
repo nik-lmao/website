@@ -37,3 +37,7 @@ I added some socials links to my GitHub and Discord profiles and added a clickab
 
 25.06.2025 - 0
 I experimented a lot with a new background design and also changed some smaller stuff, like highlighting the text with a blue glow effect and adding a waving hand (hehe)
+
+25.06.2025 - 1
+Thought a lot about how to implement the Spotify - Now Playing feature and I had no idea how to create it. Looked for the official Spotify API but it didn't really work out so I tried using last.fm's free API which also didn't work out at all, so I searched around quite a lot and finally found Lanyard, which tracks my Discord Status and also shows my Spotify (discord status). Tried implementing that, took a while but eventually worked out :) Also changed some of the colors.
+Took a lot of time, didn't use any AI for this one. really proud of myself

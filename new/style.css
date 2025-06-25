@@ -51,13 +51,6 @@ body::before {
 }
 
 
-
-
-
-
-
-
-
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -75,12 +68,10 @@ body::before {
 }
 
 
-
-
 .box {
     background: rgba(255, 255, 255, 0.01);
     border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(51, 153, 255, 0.5);
 
 
 
@@ -108,19 +99,15 @@ body::before {
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 
-
-
     z-index: 1;
 
     position: relative;
 
 }
 
-
-
 .box:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 5px 6px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 50px rgba(51, 153, 255, 0.5);
     z-index: 10;
 }
 
@@ -202,4 +189,9 @@ body::before {
     display: inline-block;
     transform-origin: 70% 70%;
     animation: wave 1.5s infinite;
+}
+
+
+#spotify-album-art {
+    border-radius: 16px;
 }
