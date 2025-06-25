@@ -12,12 +12,51 @@ body {
 
     /* background: #111111; */
 
-    background: linear-gradient(135deg, #111111, #0c0c0c);
+    background: linear-gradient(135deg, #080808, #070707);
 
     padding: 20px;
     color: white;
 
+
+    background-image:
+        radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 100%);
+
 }
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 1px,
+            transparent 1px,
+            transparent 60px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 1px,
+            transparent 1px,
+            transparent 60px
+        );
+    background-size: 60px 60px;
+    mix-blend-mode: lighten;
+}
+
+
+
+
+
+
+
+
 
 .grid {
     display: grid;
@@ -136,4 +175,31 @@ body {
     display: flex;
     gap: 12px;
     align-items: center;
+}
+
+
+.text-highlight {
+    color: #3399ff;
+    font-weight: bold;
+
+
+    text-shadow: 0 0 10px rgba(51, 153, 255, 0.5);
+}
+
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.waving-hand {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 1.5s infinite;
 }
