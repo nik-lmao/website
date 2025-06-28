@@ -97,6 +97,7 @@ function updateWeather() {
             temp = Math.round(temp); // round
 
             weatherElem.textContent = `${desc} ${temp}°C`;
+            weatherElem.style.display = "block";
             locationNameElem.textContent = `${data.location.name}, ${data.location.country}`;
         })
 
@@ -121,6 +122,7 @@ function updateSpotify(){
             const spotifyName = document.getElementById("spotify-track-name");
             const spotifyArtist = document.getElementById("spotify-artist-name");
             const spotifyPic = document.getElementById("spotify-album-art");
+            const spotifyLink = document.getElementById("spotify-link");
 
             if (data.data && data.data.listening_to_spotify) {
                 const track = data.data.spotify;
@@ -129,8 +131,78 @@ function updateSpotify(){
 
                 spotifyName.textContent = song;
                 spotifyArtist.textContent = artist;
-                spotifyPic.src = track.album_art_url;
 
+
+
+                
+                
+                const img = new Image();
+                img.crossOrigin = "Anonymous";
+
+
+                img.src = track.album_art_url;
+
+
+                img.onload = function() {
+
+
+
+                    const canvas = document.createElement("canvas");
+
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    const ctx = canvas.getContext("2d");
+
+
+                    ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                    const imageData = ctx.getImageData(0, 0, img.width, img.height).data;
+
+
+
+                    let r = 0, g = 0, b = 0, count = 0;
+                    for (let i = 0; i < imageData.length; i += 4) {
+                        r += imageData[i];
+                        g += imageData[i + 1];
+                        b += imageData[i + 2];
+                        count++;
+                    }
+
+
+                    r = Math.round(r / count);
+                    g = Math.round(g / count);
+                    b = Math.round(b / count);
+
+
+                    // ai helped me a bit with the color detection
+
+
+                    const albumArtElem = document.getElementById("spotify-album-art");
+                    albumArtElem.onmouseenter = function() {
+                        albumArtElem.style.filter = `drop-shadow(0 0 20px rgba(${r}, ${g}, ${b}, 0.7))`;
+                    };
+                    albumArtElem.onmouseleave = function() {
+                        albumArtElem.style.filter = "";
+                    };
+
+
+                    
+                };
+
+
+
+
+
+                spotifyPic.src = track.album_art_url;
+                spotifyLink.href = `https://open.spotify.com/track/${track.track_id}`;
+
+
+
+
+                if(spotifyName.textContent.length > 30) {
+                    spotifyName.textContent = spotifyName.textContent.slice(0, 30) + "...";
+                }
 
 
             } else {

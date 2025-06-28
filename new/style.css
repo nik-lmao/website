@@ -345,3 +345,51 @@ body::before {
 }
 
 
+#spotify-track-name {
+    margin-bottom: 10px;
+}
+
+#spotify-album-art:hover {
+    transform: scale(1.02);
+
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#local-weather {
+    display: none;
+
+    margin-bottom: 10px;
+}
+
+#nikita-time, #local-time {
+    margin-bottom: 10px;
+}
+
+#spotify-track-name {
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+
+    font-weight: bold;
+}
+
+#spotify-artist-name {
+    font-style: italic;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+}
+
+
+
+#local-time, #nikita-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

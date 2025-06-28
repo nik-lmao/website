@@ -49,3 +49,6 @@ Some small changes & bug fixes.
 
 28.06.2025 - 1
 Experimented a lot with cool intro animations and found something: The rows come down from the top/bottom and the opacity increases. Also added an error page for devices that break the layout of the website. The error page is only shown on devices that have a screen width which makes the boxes not fit into the layout.
+
+28.06.2025 - 2
+I added a link to the spotify album picture and also a glow of the color of the album picture. Also added a link to my Spotify profile. Added lots of different bug fixes and small changes to the design.
