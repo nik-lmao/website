@@ -46,3 +46,6 @@ Took a lot of time, didn't use any AI for this one. really proud of myself
 I added some photos I took into a scrolling gallery. Used ChatGPT for the styling and scrolling animation of the gallery (CSS). Also added a small "About Me" section with some information about me and my interests. Searching out the photos took a while but I really like the result.
 Planning on adding a better Clock UI and some responsive design since the page is only optimized for my PC right now.
 Some small changes & bug fixes.
+
+28.06.2025 - 1
+Experimented a lot with cool intro animations and found something: The rows come down from the top/bottom and the opacity increases. Also added an error page for devices that break the layout of the website. The error page is only shown on devices that have a screen width which makes the boxes not fit into the layout.
