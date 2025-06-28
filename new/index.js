@@ -81,8 +81,17 @@ function updateWeather() {
             } else if (desc.includes("Storm")) {
                 desc = "⛈️";
             }
+            else if (desc.includes("Clear")) {
+                desc = "🌤️";
+            }
+            else if (desc.includes("Snow")) {
+                desc = "❄️";
 
+            } else {
+                desc = "🌥️"; // defualt
+            }
 
+            
 
 
             temp = Math.round(temp); // round
@@ -92,7 +101,7 @@ function updateWeather() {
         })
 
         .catch(error => {
-            weatherElem.textContent = "Unable to fetch weather data: " + error.message;
+            weatherElem.textContent = "Unable to fetch weather data....";
         });
 
 }
@@ -125,7 +134,7 @@ function updateSpotify(){
 
 
             } else {
-                spotifyName.textContent = "Not listening to Spotify";
+                spotifyName.textContent = "Not listening to Spotify (or offline on discord)";
                 spotifyArtist.textContent = "";
                 spotifyPic.src = "https://images.steamusercontent.com/ugc/1811021954136916356/7E1974B61B8D02405DFE3FEBFA7527339B3D83BE/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
             }
@@ -154,7 +163,7 @@ window.onload = function () {
 
     updateTime();
     updateSpotify();
-    
-    setInterval(updateTime, 1000); /* update every second */
-    setInterval(updateSpotify, 60000); /* update every minute */
+
+    setInterval(updateTime, 1000); // update every second
+    setInterval(updateSpotify, 60000); // update every minute
 };
